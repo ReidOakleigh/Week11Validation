@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insert a new Friend</title>
+	<link th:href="@{/styles.css}" rel="stylesheet" />
+	<script type="text/javascript" th:src="@{/main.js}"></script>
+</head>
+<body>
+	<h2>Insert a New Friend</h2>
+	<form id="input" th:object="${newFriend}" th:action="@{/update/{id}(id=${newFriend.id})}" method='POST'
+		onsubmit="return validate();">
+		<table>
+			<tbody>
+			<tr>
+				<td class="label"><div>Name: </div></td>
+				<td><input id="name" name="name" size="50" th:field="*{name}"></td>
+			</tr>
+			<tr>
+				<td class="label"><div>Address: </div></td>
+				<td><input id="address" name="address" size="30" th:field="*{address}"></td>
+			</tr>
+			<tr>
+				<td class="label"><div>City: </div></td>
+				<td><input id="city" name="city" size="50" th:field="*{city}"></td>
+			</tr>
+			<tr>
+				<td class="label"><div>State: </div></td>
+				<td><input id="state" name="state" size="3" th:field="*{state}"></td>
+			</tr>
+			<tr>
+				<td class="label"><div>Zip Code: </div></td>
+				<td><input id="zip" name="zip" size="5" th:field="*{zip}" placeholder="nnnnn"></td>
+			</tr>
+			<tr>
+				<td class="label"><div>Telephone: </div></td>
+				<td><input id="phone" name="phone" size="10" th:field="*{phone}" th:type="tel" placeholder="nnnnnnnnnn"></td>
+			</tr>
+			<tr>
+				<td class="label"><div>eMail address: </div></td>
+				<td><input id="email" name="email" size="40" th:field="*{email}" th:type="email" placeholder="a@b.com"></td>
+			</tr>
+			</tbody>
+		</table>
+		<br />
+		<input name="submit" type="submit" value="submit" />
+	</form>
+	<br/>
+	<a href="/">View all Friends</a>
+</body>
+</html>

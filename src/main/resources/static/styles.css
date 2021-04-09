@@ -1,0 +1,15 @@
+	table, th, td {border: 1px solid}
+	table {border-collapse: collapse}
+	.st{text-align:center}
+	.id      {width:2%;  text-align: right}
+	.name    {width:10%; text-align:left}
+	.address {width:10%; text-align:left}
+	.city    {width:10%; text-align:left}
+	.state   {width:2%;  text-align:left}
+	.zip     {width:5%;  text-align:left}
+	.phone   {width:8%;  text-align:left}
+	.email   {width:10%; text-align:left}
+	.action  {width:2%;  text-align:center}
+	.label   {color:blue; font-size:small; text-align:right}
+	h2 {color:blue}
+	input[type=submit] {background-color:blue; color:white; padding:5px 10px; margin:4px 2px}
