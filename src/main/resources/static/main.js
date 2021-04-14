@@ -1,11 +1,10 @@
-// <script type = "text/javascript">
 
        function validate() {
-        console.log("Validating...");
-          if(document.getElementById(name).value === "") {
+ 
+          if(document.getElementById("name").value === "") {
              alert("Please provide a name");
      //      document.input.name.focus();
-             document.getElementById(name).focus() ;
+             document.getElementById("name").focus() ;
              return false;
           }
 
@@ -57,5 +56,4 @@
           }
           return (true) ;
        }
-   //-->
- // </script>
+
